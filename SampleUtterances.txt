@@ -1,0 +1,17 @@
+RecipeIntent what is the definition of {Item}
+RecipeIntent {Item}
+RecipeIntent what is {Item}
+RecipeIntent define {Item}
+RecipeIntent please define {Item}
+RecipeIntent give me a definition of {Item}
+RecipeIntent what does {Item} mean
+RecipeIntent can you define {Item}
+RecipeIntent can you tell me what {Item} means
+RecipeIntent can you give me the definition of {Item}
+RecipeIntent list the definition of {Item}
+RecipeIntent state the definition of {Item}
+RecipeIntent what's {Item}
+RecipeIntent what's the SAT definition of {Item}
+RecipeIntent what is the SAT definition of {Item}
+RecipeIntent what does the SAT word {Item} mean
+RecipeIntent I want the SAT word {Item} definition 
