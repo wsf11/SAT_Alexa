@@ -11,7 +11,7 @@
 'use strict';
 
 var AlexaSkill = require('./AlexaSkill'),
-    recipes = require('./recipes');
+    words = require('./words');
 
 var APP_ID = 'amzn1.echo-sdk-ams.app.a8b212cd-cf22-484a-8f52-43551f03a288';
 
@@ -32,23 +32,23 @@ SATWords.prototype.eventHandlers.onLaunch = function (launchRequest, session, re
 };
 
 SATWords.prototype.intentHandlers = {
-    "RecipeIntent": function (intent, session, response) {
+    "VocabHelp": function (intent, session, response) {
         var itemSlot = intent.slots.Item,
             itemName;
         if (itemSlot && itemSlot.value){
             itemName = itemSlot.value.toLowerCase();
         }
 
-        var cardTitle = "Recipe for " + itemName,
-            recipe = recipes[itemName],
+        var cardTitle = "Definition for " + itemName,
+            word = words[itemName],
             speechOutput,
             repromptOutput;
-        if (recipe) {
+        if (word) {
             speechOutput = {
-                speech: recipe,
+                speech: word,
                 type: AlexaSkill.speechOutputType.PLAIN_TEXT
             };
-            response.tellWithCard(speechOutput, cardTitle, recipe);
+            response.tellWithCard(speechOutput, cardTitle, word);
         } else {
             var speech;
             if (itemName) {
